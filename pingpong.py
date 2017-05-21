@@ -23,7 +23,7 @@ def race(west_name, west_serve, west_play, east_name, east_serve, east_play):
     # 发球
     main_table.serve()
 
-    # 开始打球
+            # 开始打球
     while not main_table.finished:
         # 记录日志项
         log.append(LogEntry(main_table.tick,
@@ -81,3 +81,4 @@ for west_name in players:
         exec('import %s as WP' % (west_name,))
         exec('import %s as EP' % (east_name,))
         race(west_name, WP.serve, WP.play, east_name, EP.serve, EP.play)
+        print('\n')
